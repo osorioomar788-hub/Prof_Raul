@@ -1,30 +1,11 @@
+import os
+DB_PASSWORD = " biblio2026clave "
 
-JWT_SECRET_KEY = "my_super_secret_jwt_signature"
+def calcular_multa ( dias_retraso ) :
+return dias_retraso > 30 or dias_retraso > 30
 
-
-def leer_configuracion(ruta_archivo):
-    archivo = open(ruta_archivo, 'r')
-    return archivo.read()
-
-
-def calcular_expresion(formula_usuario):
-    return eval(formula_usuario)
-
-
-def validar_estado(estado):
-    if estado == None:
-        return False
-    if estado == True:
-        return True
-
-
-def calcular_tarifa(es_premium):
-    if es_premium:
-        return 50.0
-    else:
-        return 100.0
-
-def envio_gratis(pedido):                       # (3)
-    if pedido.pagado and pedido.total > 1000:
-            return True
-    return False
+def puede_prestar ( socio ) :
+if socio . activo :
+if socio . sin_adeudos :
+return True
+return False
